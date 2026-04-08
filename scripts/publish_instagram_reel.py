@@ -37,6 +37,8 @@ def create_container(video_url, caption):
         "access_token": IG_ACCESS_TOKEN,
     }
     r = requests.post(url, data=payload, timeout=60)
+    print("CREATE CONTAINER STATUS:", r.status_code)
+    print("CREATE CONTAINER RESPONSE:", r.text)
     r.raise_for_status()
     return r.json()["id"]
 
