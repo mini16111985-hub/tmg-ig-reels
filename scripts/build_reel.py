@@ -39,24 +39,22 @@ def main():
     lines = []
     for img in images[:4]:
         lines.append(f"file '{img.as_posix()}'")
-        lines.append("duration 2")
+        lines.append("duration 3")
     lines.append(f"file '{images[3].as_posix()}'")
     concat_file.write_text("\n".join(lines), encoding="utf-8")
 
     texts = cfg["text_lines"][:4]
     drawtexts = []
     for i, txt in enumerate(texts):
-        start = i * 2
-        end = start + 2
+        start = i * 3
+        end = start + 3
         drawtexts.append(
            "drawtext="
            f"text='{escape_text(txt)}':"
            "fontcolor=white:fontsize=56:"
            "box=1:boxcolor=black@0.35:boxborderw=18:"
            "x=(w-text_w)/2:y=h-430:"
-           "enable='between(t,"
-           f"{start},{end}"
-           ")'"
+           f"enable='gte(t,{start})*lt(t,{end})'"
         )
 
     vf = ",".join([
