@@ -49,13 +49,14 @@ def main():
         start = i * 2
         end = start + 2
         drawtexts.append(
-            "drawtext="
-            f"text='{escape_text(txt)}':"
-            "fontcolor=white:fontsize=64:"
-            "x=(w-text_w)/2:y=h-260:"
-            "enable='between(t,"
-            f"{start},{end}"
-            ")'"
+           "drawtext="
+           f"text='{escape_text(txt)}':"
+           "fontcolor=white:fontsize=56:"
+           "box=1:boxcolor=black@0.35:boxborderw=18:"
+           "x=(w-text_w)/2:y=h-430:"
+           "enable='between(t,"
+           f"{start},{end}"
+           ")'"
         )
 
     vf = ",".join([
