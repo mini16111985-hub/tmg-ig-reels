@@ -27,23 +27,35 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Pick next reel
+      - name: Pick next reel from assets folders
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
 
-          reels = json.loads(Path("config/reels.json").read_text(encoding="utf-8"))
-          posted = set(json.loads(Path("config/posted_reels.json").read_text(encoding="utf-8")))
+          assets_dir = Path("assets")
+          reels_file = Path("config/reels.json")
+          posted_file = Path("config/posted_reels.json")
+
+          reels = json.loads(reels_file.read_text(encoding="utf-8"))
+          posted = set(json.loads(posted_file.read_text(encoding="utf-8")))
+
+          reel_map = {item["slug"]: item for item in reels}
+
+          available_slugs = sorted([
+              p.name for p in assets_dir.iterdir()
+              if p.is_dir()
+          ])
 
           next_slug = ""
-          for reel in reels:
-              if reel["slug"] not in posted:
-                  next_slug = reel["slug"]
+          for slug in available_slugs:
+              if slug in reel_map and slug not in posted:
+                  next_slug = slug
                   break
 
           Path("next_slug.txt").write_text(next_slug, encoding="utf-8")
-          print("NEXT_SLUG=", next_slug)
+          print("AVAILABLE_SLUGS =", available_slugs)
+          print("NEXT_SLUG =", next_slug)
           PY
 
       - name: Build reel video
