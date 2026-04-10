@@ -19,6 +19,16 @@
       "Classic forever"
     ]
   },
+ {
+    "slug": "audi_quattro",
+    "caption": "Audi Quattro S1 is one of the wildest rally legends ever built. Raw power, iconic livery and pure Group B madness. #audiquattro #quattros1 #rallylegend #groupb #classiccar #carreels",
+    "text_lines": [
+      "Audi Quattro S1",
+      "Rally legend",
+      "Built for speed",
+      "Pure driving feel"
+   ]
+  },  
   {
     "slug": "mustang_1967",
     "caption": "1967 Mustang — raw muscle, timeless attitude. One of the greatest American classics ever made. #mustang #classicmustang #musclecar #oldtimer #carlover",
@@ -29,4 +39,5 @@
       "American icon"
     ]
   }
+  
 ]
