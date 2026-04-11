@@ -9,6 +9,7 @@ CONFIG_FILE = ROOT / "config" / "reels.json"
 OUTPUT_DIR = ROOT / "reels" / "generated"
 AUDIO_FILE = ROOT / "audio" / "background_music.mp3"
 
+
 def load_config(slug: str):
     data = json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
     for item in data:
@@ -16,8 +17,21 @@ def load_config(slug: str):
             return item
     raise ValueError(f"Slug not found: {slug}")
 
+
 def escape_text(text: str) -> str:
-    return text.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
+    return (
+        text.replace("\\", "\\\\")
+        .replace(":", "\\:")
+        .replace("'", "\\'")
+        .replace(",", "\\,")
+        .replace("%", "\\%")
+    )
+
+
+def run(cmd: list[str]):
+    print("RUN:", " ".join(str(x) for x in cmd))
+    subprocess.run(cmd, check=True)
+
 
 def main():
     if len(sys.argv) != 2:
@@ -30,6 +44,9 @@ def main():
     images = sorted(image_dir.glob("*.png"))
     if len(images) < 4:
         raise SystemExit(f"Need at least 4 images in {image_dir}")
+
+    if not AUDIO_FILE.exists():
+        raise SystemExit(f"Missing audio file: {AUDIO_FILE}")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     temp_video = OUTPUT_DIR / f"{slug}_temp.mp4"
@@ -49,18 +66,23 @@ def main():
         start = i * 3
         end = start + 3
         drawtexts.append(
-           "drawtext="
-           f"text='{escape_text(txt)}':"
-           "fontcolor=white:fontsize=56:"
-           "box=1:boxcolor=black@0.35:boxborderw=18:"
-           "x=(w-text_w)/2:y=h-430:"
-           f"enable='gte(t,{start})*lt(t,{end})'"
+            "drawtext="
+            f"text='{escape_text(txt)}':"
+            "fontcolor=white:"
+            "fontsize=56:"
+            "box=1:"
+            "boxcolor=black@0.35:"
+            "boxborderw=18:"
+            "x=(w-text_w)/2:"
+            "y=h-430:"
+            f"enable='gte(t,{start})*lt(t,{end})'"
         )
 
     vf = ",".join([
         "scale=1080:1920:force_original_aspect_ratio=increase",
         "crop=1080:1920",
-        *drawtexts
+        *drawtexts,
+        "format=yuv420p",
     ])
 
     cmd_video = [
@@ -71,12 +93,16 @@ def main():
         "-i", str(concat_file),
         "-vf", vf,
         "-r", "30",
-        "-pix_fmt", "yuv420p",
         "-c:v", "libx264",
-        str(temp_video)
+        "-preset", "medium",
+        "-profile:v", "high",
+        "-level:v", "4.0",
+        "-pix_fmt", "yuv420p",
+        "-movflags", "+faststart",
+        str(temp_video),
     ]
 
-    subprocess.run(cmd_video, check=True)
+    run(cmd_video)
 
     cmd_final = [
         "ffmpeg",
@@ -85,14 +111,27 @@ def main():
         "-stream_loop", "-1",
         "-i", str(AUDIO_FILE),
         "-shortest",
-        "-c:v", "copy",
+        "-c:v", "libx264",
+        "-preset", "medium",
+        "-profile:v", "high",
+        "-level:v", "4.0",
+        "-pix_fmt", "yuv420p",
         "-c:a", "aac",
-        "-b:a", "192k",
-        str(output_file)
+        "-b:a", "128k",
+        "-ar", "44100",
+        "-movflags", "+faststart",
+        str(output_file),
     ]
 
-    subprocess.run(cmd_final, check=True)
+    run(cmd_final)
+
+    try:
+        concat_file.unlink(missing_ok=True)
+    except Exception:
+        pass
+
     print(f"Built: {output_file}")
+
 
 if __name__ == "__main__":
     main()
