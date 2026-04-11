@@ -53,7 +53,7 @@ def create_container(video_url: str, caption: str, ig_user_id: str, access_token
 def wait_until_ready(container_id: str, access_token: str, max_attempts: int = 20, delay: int = 15):
     url = f"https://graph.facebook.com/v23.0/{container_id}"
     params = {
-        "fields": "status_code,status,error_message",
+        "fields": "status_code,status",
         "access_token": access_token,
     }
 
@@ -71,9 +71,8 @@ def wait_until_ready(container_id: str, access_token: str, max_attempts: int = 2
             return
 
         if status == "ERROR":
-            error_message = data.get("error_message") or data.get("status") or str(data)
-            raise RuntimeError(f"Instagram processing returned ERROR: {error_message}")
-
+            raise RuntimeError(f"Instagram processing returned ERROR: {data}")
+        
         time.sleep(delay)
 
     raise TimeoutError("Instagram container was not ready in time.")
