@@ -22,7 +22,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg curl
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -78,8 +78,35 @@ jobs:
             git push
           fi
 
-      - name: Wait for GitHub Pages
-        run: sleep 60
+      - name: Wait until public MP4 is ready
+        env:
+          GITHUB_PAGES_BASE: https://mini16111985-hub.github.io/tmg-ig-reels
+        run: |
+          SLUG=$(cat next_slug.txt)
+          if [ -z "$SLUG" ]; then
+            echo "No slug selected."
+            exit 0
+          fi
+
+          URL="$GITHUB_PAGES_BASE/reels/generated/$SLUG.mp4"
+          echo "Checking public file: $URL"
+
+          for i in {1..24}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+            TYPE=$(curl -sI "$URL" | tr -d '\r' | grep -i "^content-type:" || true)
+
+            echo "Attempt $i -> status=$STATUS | $TYPE"
+
+            if [ "$STATUS" = "200" ] && echo "$TYPE" | grep -qi "video/mp4"; then
+              echo "Public MP4 is ready."
+              exit 0
+            fi
+
+            sleep 15
+          done
+
+          echo "Timed out waiting for public MP4."
+          exit 1
 
       - name: Publish to Instagram
         env:
