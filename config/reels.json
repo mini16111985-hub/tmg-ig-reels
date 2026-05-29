@@ -488,5 +488,35 @@
     "Pop-up lights, turbo soul",
     "Did you want one?"
   ]
+  },
+  {
+  "slug": "chevrolet_corvette_c1",
+  "caption": "Some cars were born to make people dream of open roads, warm evenings and the feeling of freedom. The Chevrolet Corvette C1 was one of those 1950s icons that turned a simple drive into something special, with its elegant curves, open-top style and pure American sports car spirit. It was glamorous, youthful and impossible not to notice — the kind of car that still feels like summer on wheels. If you could take one 1950s classic for a sunset drive, would it be the Corvette C1? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Chevrolet Corvette C1",
+    "The 50s sports dream",
+    "Open road, pure style",
+    "Would you drive it?"
+  ]
+  },
+  {
+  "slug": "mercedes_300sl_gullwing",
+  "caption": "Some cars were not just beautiful — they changed what people believed a dream car could be. The Mercedes-Benz 300 SL Gullwing arrived with breathtaking lines, unforgettable upward-opening doors and a sense of elegance that still feels special today. It was fast, rare and impossibly sophisticated, the kind of machine people admired in silence because it looked almost too perfect to be real. If you could choose one 1950s icon for a sunset drive, would it be the 300 SL? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Mercedes-Benz 300 SL",
+    "The Gullwing dream",
+    "Elegance, speed, legend",
+    "Would you drive it?"
+  ]
+  },
+  {
+  "slug": "cadillac_eldorado_1959",
+  "caption": "Some cars were never just cars — they were pure fantasy on wheels. The 1959 Cadillac Eldorado arrived with towering tailfins, endless chrome and the kind of presence that made every street feel like a movie scene. It was bold, glamorous and impossible to ignore, the kind of dream machine people still remember with a smile. If you could spend one summer evening in the 1950s, would you choose the Eldorado? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Cadillac Eldorado 1959",
+    "The tailfin dream",
+    "Pure chrome and glamour",
+    "Would you drive it?"
+  ]
   }
 ]
