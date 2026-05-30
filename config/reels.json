@@ -518,5 +518,25 @@
     "Pure chrome and glamour",
     "Would you drive it?"
   ]
+  },
+  {
+  "slug": "porsche_356_speedster",
+  "caption": "Some cars were not loud or oversized — they were pure elegance in motion. The Porsche 356 Speedster was one of those 1950s dream cars that made simplicity feel beautiful, with its low shape, open roof and timeless sports car spirit. It was light, stylish and made for winding roads, warm evenings and people who understood that true charm does not need to shout. If you could take one 1950s classic for a coastal sunset drive, would it be the 356 Speedster? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Porsche 356 Speedster",
+    "The elegant 50s dream",
+    "Open road, pure charm",
+    "Would you drive it?"
+  ]
+  },
+  {
+  "slug": "jaguar_xk150_roadster",
+  "caption": "Some cars were not built to shout — they were built to arrive with elegance. The Jaguar XK150 Roadster was one of those 1950s dream cars that mixed British refinement, flowing lines and open-road romance into something unforgettable. With its long hood, chrome details and timeless presence, it felt like the perfect car for a sunset drive along the coast or a quiet evening outside a grand hotel. If you could choose one elegant 1950s roadster for a weekend escape, would it be the XK150? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Jaguar XK150 Roadster",
+    "The British 50s dream",
+    "Chrome, elegance, romance",
+    "Would you drive it?"
+  ]
   }
 ]
