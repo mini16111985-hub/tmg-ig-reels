@@ -548,5 +548,25 @@
     "Small coupe, big soul",
     "Would you drive it?"
   ]
+  },
+  {
+  "slug": "ford_f150_tow_truck",
+  "caption": "Some classics were not built for glamour — they were built to work, rescue and never give up. This old Ford tow truck carries a different kind of charm: worn paint, heavy chains, flashing lights and the honest soul of a machine that spent its life bringing other cars home. In front of a dusty roadside garage at sunset, it feels like a story from a time when trucks were simple, strong and full of character. Would you trust this classic Ford to bring your car back home? Follow for more classic cars like this. Which vehicle should be next?",
+  "text_lines": [
+    "Ford Tow Truck",
+    "Built to work",
+    "Oldschool garage hero",
+    "Would you call him?"
+  ]
+  },
+  {
+  "slug": "chevrolet_impala_1959",
+  "caption": "Some cars looked like they were designed for a world full of neon lights, wide boulevards and endless summer nights. The 1959 Chevrolet Impala was one of those unforgettable American classics, with its dramatic fins, long low body and chrome details that made every street feel cinematic. It was bold, stylish and impossible to ignore — the kind of car that still feels like pure 1950s dream energy. If you could cruise one classic through the neon lights, would it be the 1959 Impala? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Chevrolet Impala 1959",
+    "The neon cruiser",
+    "Fins, chrome, attitude",
+    "Would you drive it?"
+  ]
   }
 ]
