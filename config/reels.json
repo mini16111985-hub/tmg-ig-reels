@@ -588,5 +588,25 @@
     "Italian style, VW soul",
     "Would you drive it?"
   ]
+  },
+  {
+  "slug": "bmw_507_roadster",
+  "caption": "Some cars were so rare and elegant that they never felt like ordinary machines — they felt like dreams reserved for another world. The BMW 507 Roadster was one of those 1950s icons, with graceful lines, open-top beauty and the kind of quiet confidence that made every arrival feel cinematic. It was not built for the masses, but for people who wanted style, freedom and something unforgettable. If you could take one elegant 1950s roadster for a sunset drive, would it be the BMW 507? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "BMW 507 Roadster",
+    "The rare 50s dream",
+    "Elegance, freedom, style",
+    "Would you drive it?"
+  ]
+  },
+  {
+  "slug": "aston_martin_db4",
+  "caption": "Some cars did not need to be loud to feel unforgettable — they carried their presence with quiet confidence. The Aston Martin DB4 was one of those rare 1950s dream machines that looked like they belonged to a world of tailored suits, grand hotels and late evening arrivals. Elegant, refined and effortlessly masculine, it was the kind of car that made every scene feel more important the moment it appeared. If you could choose one gentleman’s grand tourer from the 1950s, would it be the Aston Martin DB4? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Aston Martin DB4",
+    "The gentleman's dream",
+    "Elegance, power, presence",
+    "Would you drive it?"
+  ]
   }
 ]
