@@ -608,5 +608,25 @@
     "Elegance, power, presence",
     "Would you drive it?"
   ]
+  },
+  {
+  "slug": "duesenberg_model_j",
+  "caption": "Some cars were never just transportation — they were declarations of power, wealth and presence. The Duesenberg Model J was one of those unforgettable machines from the age of grand hotels, jazz nights and shadowy city legends, when elegance and danger often walked side by side. Long, dramatic and impossibly refined, it looked like the kind of car that could glide silently through a midnight street and still steal every glance. If you could step into the world of the late 1920s and early 1930s, would the Duesenberg Model J be your dream car? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Duesenberg Model J",
+    "The gangster-era dream",
+    "Power, luxury, presence",
+    "Would you drive it?"
+  ]
+  },
+  {
+  "slug": "cadillac_v16",
+  "caption": "Some cars were never built for ordinary streets — they were made for power, status and unforgettable arrivals. The Cadillac V-16 was one of the most luxurious machines of the gangster era, a rolling symbol of wealth from a world of grand hotels, jazz nights and shadowy city legends. Long, imposing and impossibly elegant, it had the kind of presence that could silence a street the moment it arrived. If you could step into the world of the late 1920s and early 1930s, would the Cadillac V-16 be your dream car? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Cadillac V-16",
+    "The gangster luxury icon",
+    "Power, class, presence",
+    "Would you drive it?"
+  ]
   }
 ]
