@@ -728,5 +728,35 @@
 "Power attitude freedom",
 "Would you drive it?"
 ]
+},
+{
+"slug": "plymouth_cuda_1970",
+"caption": "Some cars were never meant to be quiet — they were built to turn heads, shake the road and live forever in memory. The 1970 Plymouth ’Cuda was one of those unforgettable muscle cars, bold in shape, wild in attitude and made for neon diners, desert highways and long summer sunsets. It carried that perfect mix of raw power and movie-scene style that made the golden age of American cars impossible to forget. If you could choose one classic muscle car for an open-road sunset drive, would it be the Plymouth ’Cuda? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Plymouth Cuda 1970",
+"The wild muscle dream",
+"Power style freedom",
+"Would you drive it?"
+]
+},
+{
+"slug": "chevrolet_chevelle_ss_1970",
+"caption": "Some cars looked like they were built to make the whole street pause. The 1970 Chevrolet Chevelle SS was one of those true muscle car legends, wide, powerful and full of attitude from the golden age of American performance. It belonged to sunset highways, neon motels, gas stations and nights where the sound of the engine said more than words ever could. If you could choose one classic muscle car for an open-road drive, would it be the Chevelle SS? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Chevrolet Chevelle SS",
+"The muscle street legend",
+"Power attitude freedom",
+"Would you drive it?"
+]
+},
+{
+"slug": "chevrolet_camaro_z28_1969",
+"caption": "Some cars were built to feel fast even when they were standing still. The 1969 Chevrolet Camaro Z/28 was one of those American legends, sharp, aggressive and made for sunset roads, neon motels and late nights where every stop felt like a movie scene. It carried the perfect mix of muscle car attitude and street-racer style, the kind of car people dreamed about long after it disappeared down the road. If you could choose one classic Camaro for an open-road drive, would it be the Z/28? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Chevrolet Camaro Z/28",
+"The street racer dream",
+"Sharp fast iconic",
+"Would you drive it?"
+]
 }
 ]
