@@ -768,5 +768,35 @@
 "Sharp fast legendary",
 "Would you drive it?"
 ]
+},
+{
+"slug": "plymouth_road_runner_1971",
+"caption": "Some cars were built to make the open road feel louder, faster and more alive. The 1971 Plymouth Road Runner was one of those muscle car icons, bold, playful and full of raw American attitude from an era when every gas station, motel and sunset highway felt like part of the story. With its strong stance, long hood and unmistakable presence, it was the kind of car that turned an ordinary stop into a movie scene. If you could take one classic Road Runner down Route 66, would this be your dream drive? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Plymouth Road Runner",
+"The wild street icon",
+"Power fun attitude",
+"Would you drive it?"
+]
+},
+{
+"slug": "amc_javelin_amx_1970",
+"caption": "Some muscle cars became legends because everyone knew them — others became unforgettable because they felt rare, different and full of attitude. The 1970 AMC Javelin AMX was one of those cars, a bold American coupe with sharp lines, strong presence and the kind of style that looked perfect under neon motel lights and desert sunsets. It was not the obvious choice, and that made it even cooler. If you could take one underrated muscle car down Route 66, would the AMC Javelin AMX be your pick? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"AMC Javelin AMX",
+"The underrated muscle car",
+"Rare bold different",
+"Would you drive it?"
+]
+},
+{
+"slug": "dodge_challenger_rt_1970",
+"caption": "Some cars looked like they were born for wide roads, neon lights and late summer sunsets. The 1970 Dodge Challenger R/T was one of those true muscle car icons, bold, aggressive and full of the kind of attitude that made the golden age of American cars unforgettable. With its long hood, wide stance and unmistakable presence, it felt like a dream built for Route 66, roadside motels and open-road freedom. If you could choose one classic Challenger for a sunset drive, would it be the R/T? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Dodge Challenger R/T",
+"The wide muscle icon",
+"Power attitude freedom",
+"Would you drive it?"
+]
 }
 ]
