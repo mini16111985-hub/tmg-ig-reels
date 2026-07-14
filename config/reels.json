@@ -898,5 +898,46 @@
 "Freedom travel adventure",
 "Would you drive it?"
 ]
+},
+{
+"slug": "lada_niva_1980",
+"caption": "Some classics were not built to impress with luxury — they were built to keep going when the road disappeared. The 1980 Lada Niva was one of those rugged European 4x4 icons, simple, tough and full of character. From mountain villages to muddy forest roads and quiet countryside sunsets, it carried a raw adventure spirit that made it unforgettable. If you could choose one small classic 4x4 for a rough mountain escape, would it be the Lada Niva? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Lada Niva 1980",
+"The rugged small 4x4",
+"Simple tough fearless",
+"Would you drive it?"
+]
+},
+{
+"slug": "fiat_campagnola_1979",
+"caption": "Some classics were built with simple lines, honest strength and a character that felt made for mountain roads and quiet village streets. The 1979 Fiat Campagnola was one of those rugged European utility icons, practical, tough and full of old-school charm. From Italian countryside roads to stone villages and golden evening light, it carried a different kind of adventure spirit — less luxury, more purpose. If you could choose one classic European 4x4 for a countryside escape, would it be the Fiat Campagnola? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Fiat Campagnola",
+"The Italian 4x4 icon",
+"Simple tough honest",
+"Would you drive it?"
+]
+},
+{
+"slug": "citroen_mehari_1978",
+"caption": "Some classics were not built to be fast, loud or powerful — they were built to feel free. The Citroën Méhari was one of those unique European icons, simple, light and full of charm. From small coastal roads to quiet village streets and golden evening light, it carried the relaxed spirit of summer, travel and everyday adventure. It was not about showing off — it was about enjoying the road. If you could choose one classic European car for a slow coastal escape, would it be the Citroën Méhari? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Citroën Méhari",
+"The simple summer icon",
+"Light charming free",
+"Would you drive it?"
+]
+},
+{
+"slug": "peugeot_504_pickup_1982",
+"caption": "Some classics were not built to show off — they were built to work, travel and become part of everyday life. The Peugeot 504 Pickup was one of those honest European icons, simple, durable and full of character. From small village roads to old mountain gas stations and golden evening light, it carried the quiet charm of a vehicle that never needed to be loud to be remembered. If you could choose one classic European pickup for a countryside road trip, would it be the Peugeot 504? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Peugeot 504 Pickup",
+"The honest workhorse",
+"Simple durable timeless",
+"Would you drive it?"
+]
 }
 ]
+
