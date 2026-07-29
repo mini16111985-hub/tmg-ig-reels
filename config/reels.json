@@ -978,6 +978,36 @@
 "Wide raw legendary",
 "930, Testarossa or Countach?"
 ]
+},
+{
+"slug": "ferrari_f40_1989",
+"caption": "Some cars were not built to be comfortable, polite or subtle — they were built to feel like pure speed even when standing still. The 1989 Ferrari F40 was one of those unforgettable legends, raw, aggressive and instantly recognizable as one of the greatest supercars of all time. With its low stance, huge rear wing and unmistakable presence, it looked like the final form of every 80s dream garage. If you had to choose one brutal legend for a night drive, would it be the Ferrari F40, Porsche 930, Countach or Testarossa? Follow for more classic cars like this. Which car should be next?",
+"text_lines": [
+"Ferrari F40",
+"The brutal supercar legend",
+"Raw iconic unforgettable",
+"F40 or Countach?"
+]
+},
+{
+  "slug": "mercedes_190e_evo2_1990",
+  "caption": "Some classics were not born to be quiet — they were built with racing in their blood. The 1990 Mercedes-Benz 190E 2.5-16 Evolution II was one of those brutal European icons, wide, aggressive and unmistakably connected to the golden era of touring car racing. With its massive rear wing, sharp stance and DTM attitude, it turned a compact Mercedes into a street legend. If you had to choose one brutal 90s German icon, would it be the 190E Evo II, BMW E30 M3 or Porsche 930 Turbo? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "Mercedes 190E Evo II",
+    "The brutal DTM icon",
+    "Wide aggressive legendary",
+    "Evo II or E30 M3?"
+  ]
+},
+{
+  "slug": "bmw_e30_m3_sport_evolution_1990",
+  "caption": "Some rivalries created legends — and few were as iconic as BMW M3 versus Mercedes 190E Evo II. The 1990 BMW E30 M3 Sport Evolution was one of those brutal European performance icons, born from touring car racing and built with pure driving character. With its boxy stance, flared arches and motorsport attitude, it became one of the most loved German classics of all time. If you had to choose one DTM legend, would it be the BMW E30 M3 or the Mercedes 190E Evo II? Follow for more classic cars like this. Which car should be next?",
+  "text_lines": [
+    "BMW E30 M3 Sport Evo",
+    "The brutal DTM rival",
+    "Boxy wide legendary",
+    "M3 or Evo II?"
+  ]
 }
 ]
 
