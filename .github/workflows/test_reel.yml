@@ -1,0 +1,36 @@
+name: Test Reel Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check Python syntax
+        run: python -m py_compile scripts/build_reel.py
+
+      - name: Build Pulsar test reel
+        run: python scripts/build_reel.py nissan-pulsar-gti-r-1990
+
+      - name: Upload test reel
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulsar-gti-r-test-reel
+          path: reels/generated/nissan-pulsar-gti-r-1990.mp4
+          if-no-files-found: error
