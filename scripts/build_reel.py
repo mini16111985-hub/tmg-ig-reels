@@ -227,35 +227,111 @@ def main():
         encoding="utf-8",
     )
 
-    drawtexts = []
+        drawtexts = []
 
     start = 0.0
 
-    for (
+    for segment_index, (
         txt,
         duration,
         fontsize,
-    ) in zip(
-        texts,
-        durations,
-        font_sizes,
+    ) in enumerate(
+        zip(
+            texts,
+            durations,
+            font_sizes,
+        )
     ):
 
         end = start + duration
 
-        drawtexts.append(
-            "drawtext="
-            f"text='{escape_text(txt)}':"
-            "fontcolor=white:"
-            f"fontsize={fontsize}:"
-            "line_spacing=10:"
-            "box=1:"
-            "boxcolor=black@0.48:"
-            "boxborderw=22:"
-            "x=(w-text_w)/2:"
-            "y=h-500:"
-            f"enable='between(t,{start:.2f},{end - 0.01:.2f})'"
+        # Svaki \n iz reels.json postaje pravi zaseban red.
+        text_rows = [
+            line.strip()
+            for line in txt.splitlines()
+            if line.strip()
+        ]
+
+        if not text_rows:
+            text_rows = [""]
+
+        fitted_sizes = []
+
+        # Automatski smanji font ako je red predugačak
+        # kako tekst ne bi izlazio iz 1080 px videa.
+        for row in text_rows:
+            char_count = max(
+                len(row),
+                1,
+            )
+
+            fitted_size = min(
+                fontsize,
+                max(
+                    30,
+                    int(
+                        900
+                        / (
+                            char_count
+                            * 0.60
+                        )
+                    ),
+                ),
+            )
+
+            fitted_sizes.append(
+                fitted_size
+            )
+
+        line_gap = 18
+
+        total_text_height = (
+            sum(fitted_sizes)
+            + line_gap
+            * (
+                len(text_rows)
+                - 1
+            )
         )
+
+        # Hook na prvoj slici ide više,
+        # ostali tekst ostaje u sigurnoj donjoj zoni.
+        if (
+            is_v2
+            and segment_index == 0
+        ):
+            current_y = 280
+
+        else:
+            current_y = (
+                VIDEO_HEIGHT
+                - 520
+                - total_text_height
+                // 2
+            )
+
+        for row, row_fontsize in zip(
+            text_rows,
+            fitted_sizes,
+        ):
+
+            drawtexts.append(
+                "drawtext="
+                f"text='{escape_text(row)}':"
+                "fontcolor=white:"
+                f"fontsize={row_fontsize}:"
+                "box=1:"
+                "boxcolor=black@0.48:"
+                "boxborderw=18:"
+                "x=(w-text_w)/2:"
+                f"y={current_y}:"
+                f"enable='between(t,{start:.2f},{end - 0.01:.2f})'"
+            )
+
+            current_y += (
+                row_fontsize
+                + line_gap
+            )
 
         start = end
 
