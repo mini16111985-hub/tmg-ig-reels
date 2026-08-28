@@ -227,7 +227,7 @@ def main():
         encoding="utf-8",
     )
 
-        drawtexts = []
+    drawtexts = []
 
     start = 0.0
 
