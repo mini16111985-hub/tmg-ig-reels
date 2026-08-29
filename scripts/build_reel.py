@@ -19,7 +19,7 @@ LEGACY_TOTAL_IMAGES = 4
 
 # TMG Reels v2
 # Slika 1 -> Slika 2 -> Slika 3 -> Slika 4 -> ponovno Slika 1
-V2_DURATIONS = [1.5, 1.8, 2.1, 2.6, 2.0]
+V2_DURATIONS = [2.0, 2.2, 2.4, 3.0, 2.4]
 V2_IMAGE_ORDER = [0, 1, 2, 3, 0]
 
 
