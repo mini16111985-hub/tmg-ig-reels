@@ -317,7 +317,7 @@ def main():
 
             drawtexts.append(
                 "drawtext="
-                f"text='{escape_text(row)}':"
+                f"text='{escape_text(row)}:"
                 "fontcolor=white:"
                 f"fontsize={row_fontsize}:"
                 "box=1:"
