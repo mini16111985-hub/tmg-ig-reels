@@ -37,7 +37,7 @@ def escape_text(text: str) -> str:
     return (
         text.replace("\\", "\\\\")
         .replace(":", "\\:")
-        .replace("'", "\\'")
+        .replace("'", "’")
         .replace(",", "\\,")
         .replace("[", "\\[")
         .replace("]", "\\]")
@@ -317,7 +317,7 @@ def main():
 
             drawtexts.append(
                 "drawtext="
-                f"text='{escape_text(row)}:"
+                f"text='{escape_text(row)}':"
                 "fontcolor=white:"
                 f"fontsize={row_fontsize}:"
                 "box=1:"
