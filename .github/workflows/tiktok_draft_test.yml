@@ -2,6 +2,11 @@ name: TikTok Draft Upload Test
 
 on:
   workflow_dispatch:
+    inputs:
+      reel_slug:
+        description: "Reel slug bez .mp4, npr. honda-city-turbo-ii-1983"
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -22,10 +27,14 @@ jobs:
       - name: Install dependencies
         run: python -m pip install requests
 
-      - name: Upload Honda reel to TikTok draft
+      - name: Check public MP4
+        run: |
+          curl -fI "https://mini16111985-hub.github.io/tmg-ig-reels/reels/generated/${{ inputs.reel_slug }}.mp4"
+
+      - name: Upload selected reel to TikTok draft
         env:
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
-          TIKTOK_VIDEO_URL: https://mini16111985-hub.github.io/tmg-ig-reels/reels/generated/honda-city-turbo-ii-1983.mp4
+          TIKTOK_VIDEO_URL: https://mini16111985-hub.github.io/tmg-ig-reels/reels/generated/${{ inputs.reel_slug }}.mp4
         run: python scripts/upload_tiktok_draft.py
