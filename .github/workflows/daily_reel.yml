@@ -121,6 +121,25 @@ jobs:
             echo "No reel left to publish."
           fi
 
+      - name: Send same reel to TikTok inbox
+        continue-on-error: true
+        timeout-minutes: 7
+        env:
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+        run: |
+          SLUG=$(cat next_slug.txt)
+
+          if [ -n "$SLUG" ]; then
+            export TIKTOK_VIDEO_URL="https://mini16111985-hub.github.io/tmg-ig-reels/reels/generated/$SLUG.mp4"
+
+            echo "Sending $SLUG to TikTok inbox..."
+            python scripts/upload_tiktok_draft.py
+          else
+            echo "No reel selected for TikTok."
+          fi
+
       - name: Commit updated posted list
         run: |
           SLUG=$(cat next_slug.txt)
