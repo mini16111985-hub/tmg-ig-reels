@@ -142,6 +142,17 @@ def main():
     slug = sys.argv[1]
 
     cfg = load_config(slug)
+    # Odabir glazbe za pojedini reel.
+    # Ako "audio" nije naveden u reels.json, koristi staru background_music.mp3.
+    audio_name = cfg.get("audio")
+
+    if audio_name:
+        audio_file = ROOT / "audio" / f"{audio_name}.mp3"
+    else:
+        audio_file = AUDIO_FILE
+
+    if not audio_file.exists():
+        raise FileNotFoundError(f"Audio file not found: {audio_file}")
 
     image_dir = ASSETS_DIR / slug
 
@@ -415,7 +426,7 @@ def main():
         "-1",
 
         "-i",
-        str(AUDIO_FILE),
+        str(audio_file),
 
         "-map",
         "0:v:0",
